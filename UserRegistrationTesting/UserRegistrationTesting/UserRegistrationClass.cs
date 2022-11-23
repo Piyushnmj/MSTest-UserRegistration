@@ -20,5 +20,11 @@ namespace UserRegistrationTesting
         {
             return Regex.IsMatch(lastName, lastNamePattern);
         }
+
+        public string emailPattern = @"^([a][b][c])([_\.\+\-])([a-zA-Z0-9]+)\@([b][l])\.([c][o])\.([a-z]{2})*$";
+        public bool ValidateEmail(string email)
+        {
+            return Regex.IsMatch(email, emailPattern);
+        }
     }
 }

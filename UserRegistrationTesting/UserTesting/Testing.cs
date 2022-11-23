@@ -26,5 +26,16 @@ namespace UserTesting
             var regex = new Regex(name);
             StringAssert.Matches("Nimje", regex);
         }
+
+        [TestMethod]
+        public void TestEmail()
+        {
+            UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
+
+            objTest.ValidateEmail("abc.piyush@bl.co.in");
+            string name = @"^([a][b][c])([_\.\+\-])([a-zA-Z0-9]+)\@([b][l])\.([c][o])\.([a-z]{2})*$";
+            var regex = new Regex(name);
+            StringAssert.Matches("abc.xyz@bl.co.in", regex);
+        }
     }
 }
