@@ -10,6 +10,7 @@ namespace UserRegistrationTesting
             Console.WriteLine("Welcome to User Registration Testing Problem");
 
             UserRegistrationClass objUser = new UserRegistrationClass();
+
             Console.WriteLine("\nEnter First Name: ");
             string firstName = Console.ReadLine();
             objUser.ValidateFirstName(firstName);
@@ -25,6 +26,10 @@ namespace UserRegistrationTesting
             Console.WriteLine("\nEnter Mobile Number: ");
             string mobileNum = Console.ReadLine();
             objUser.ValidateMobileNumber(mobileNum);
+
+            Console.WriteLine("\nEnter Password: ");
+            string password = Console.ReadLine();
+            objUser.ValidatePassword(password);
         }
     }
 }

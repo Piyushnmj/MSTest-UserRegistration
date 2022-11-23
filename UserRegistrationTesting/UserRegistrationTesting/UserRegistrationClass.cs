@@ -32,5 +32,11 @@ namespace UserRegistrationTesting
         {
             return Regex.IsMatch(mobileNum, mobilePattern);
         }
+
+        public string passwordPattern = @"^[A-Za-z]{1}[A-Za-z0-9]{7,}";
+        public bool ValidatePassword(string password)
+        {
+            return Regex.IsMatch(password, passwordPattern);
+        }
     }
 }
