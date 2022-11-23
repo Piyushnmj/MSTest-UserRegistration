@@ -1,10 +1,18 @@
-﻿namespace UserRegistrationTesting
+﻿using System.Security.Cryptography.X509Certificates;
+using System.Text.RegularExpressions;
+
+namespace UserRegistrationTesting
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration Testing Problem");
+
+            UserRegistrationClass objUser = new UserRegistrationClass();
+            Console.WriteLine("Enter First Name: ");
+            string firstName = Console.ReadLine();
+            objUser.ValidateFirstName(firstName);
         }
     }
 }
