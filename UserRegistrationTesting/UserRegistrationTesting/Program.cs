@@ -13,6 +13,10 @@ namespace UserRegistrationTesting
             Console.WriteLine("\nEnter First Name: ");
             string firstName = Console.ReadLine();
             objUser.ValidateFirstName(firstName);
+
+            Console.WriteLine("\nEnter Last Name: ");
+            string lastName = Console.ReadLine();
+            objUser.ValidateLastName(lastName);
         }
     }
 }

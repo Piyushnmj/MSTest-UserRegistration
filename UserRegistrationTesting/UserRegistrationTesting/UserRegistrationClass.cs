@@ -14,5 +14,11 @@ namespace UserRegistrationTesting
         {
             return Regex.IsMatch(firstName, firstNamePattern);
         }
+
+        public string lastNamePattern = "^[A-Z]{1}[a-z]{2,}$";
+        public bool ValidateLastName(string lastName)
+        {
+            return Regex.IsMatch(lastName, lastNamePattern);
+        }
     }
 }

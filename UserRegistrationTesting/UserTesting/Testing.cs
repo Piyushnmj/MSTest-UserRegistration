@@ -15,5 +15,16 @@ namespace UserTesting
             var regex = new Regex(name);
             StringAssert.Matches("Piyush", regex);
         }
+
+        [TestMethod]
+        public void TestLastName()
+        {
+            UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
+
+            objTest.ValidateLastName("Nimje");
+            string name = @"^[A-Z]{1}[a-z]{2,}$";
+            var regex = new Regex(name);
+            StringAssert.Matches("Nimje", regex);
+        }
     }
 }
