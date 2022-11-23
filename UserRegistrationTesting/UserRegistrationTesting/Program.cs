@@ -10,7 +10,7 @@ namespace UserRegistrationTesting
             Console.WriteLine("Welcome to User Registration Testing Problem");
 
             UserRegistrationClass objUser = new UserRegistrationClass();
-            Console.WriteLine("Enter First Name: ");
+            Console.WriteLine("\nEnter First Name: ");
             string firstName = Console.ReadLine();
             objUser.ValidateFirstName(firstName);
         }

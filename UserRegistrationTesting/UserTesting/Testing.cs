@@ -6,7 +6,7 @@ namespace UserTesting
     public class Testing
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestFirstName()
         {
             UserRegistrationTesting.UserRegistrationClass objTest= new UserRegistrationTesting.UserRegistrationClass();
 
