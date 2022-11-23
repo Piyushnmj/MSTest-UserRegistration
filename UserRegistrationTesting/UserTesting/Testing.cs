@@ -33,9 +33,20 @@ namespace UserTesting
             UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
 
             objTest.ValidateEmail("abc.piyush@bl.co.in");
-            string name = @"^([a][b][c])([_\.\+\-])([a-zA-Z0-9]+)\@([b][l])\.([c][o])\.([a-z]{2})*$";
-            var regex = new Regex(name);
+            string email = @"^([a][b][c])([_\.\+\-])([a-zA-Z0-9]+)\@([b][l])\.([c][o])\.([a-z]{2})*$";
+            var regex = new Regex(email);
             StringAssert.Matches("abc.xyz@bl.co.in", regex);
+        }
+
+        [TestMethod]
+        public void TestMobileNumber()
+        {
+            UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
+
+            objTest.ValidateMobileNumber("+91 1234567890");
+            string mobileNum = @"^\+[1-9]{1}[0-9]{0,2}\s[1-9]{1}[0-9]{9}";
+            var regex = new Regex(mobileNum);
+            StringAssert.Matches("+91 1234567890", regex);
         }
     }
 }

@@ -21,6 +21,10 @@ namespace UserRegistrationTesting
             Console.WriteLine("\nEnter Email: ");
             string email = Console.ReadLine();
             objUser.ValidateEmail(email);
+
+            Console.WriteLine("\nEnter Mobile Number: ");
+            string mobileNum = Console.ReadLine();
+            objUser.ValidateMobileNumber(mobileNum);
         }
     }
 }
