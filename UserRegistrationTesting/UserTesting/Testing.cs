@@ -92,5 +92,104 @@ namespace UserTesting
             var regex = new Regex(password);
             StringAssert.Matches("PiyusHH11hh#", regex);
         }
+
+        [TestMethod]
+        public void TestSampleEmail1()
+        {
+            UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
+
+            objTest.ValidateSampleEmail("abc@yahoo.com");
+            string email = @"^(\w)([_\+\-\.]{0,1}[\w])*[@][a-z0-9]{1,} *[.][a-z]{2,}[\.]{0,}[a-z]{0,}$";
+            var regex = new Regex(email);
+            StringAssert.Matches("abc@yahoo.com", regex);
+        }
+
+        [TestMethod]
+        public void TestSampleEmail2()
+        {
+            UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
+
+            objTest.ValidateSampleEmail("abc-100@yahoo.com");
+            string email = @"^(\w)([_\+\-\.]{0,1}[\w])*[@][a-z0-9]{1,} *[.][a-z]{2,}[\.]{0,}[a-z]{0,}$";
+            var regex = new Regex(email);
+            StringAssert.Matches("abc-100@yahoo.com", regex);
+        }
+
+        [TestMethod]
+        public void TestSampleEmail3()
+        {
+            UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
+
+            objTest.ValidateSampleEmail("abc.100@yahoo.com");
+            string email = @"^(\w)([_\+\-\.]{0,1}[\w])*[@][a-z0-9]{1,} *[.][a-z]{2,}[\.]{0,}[a-z]{0,}$";
+            var regex = new Regex(email);
+            StringAssert.Matches("abc.100@yahoo.com", regex);
+        }
+
+        [TestMethod]
+        public void TestSampleEmail4()
+        {
+            UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
+
+            objTest.ValidateSampleEmail("abc111@abc.com");
+            string email = @"^(\w)([_\+\-\.]{0,1}[\w])*[@][a-z0-9]{1,} *[.][a-z]{2,}[\.]{0,}[a-z]{0,}$";
+            var regex = new Regex(email);
+            StringAssert.Matches("abc111@abc.com", regex);
+        }
+
+        [TestMethod]
+        public void TestSampleEmail5()
+        {
+            UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
+
+            objTest.ValidateSampleEmail("abc-100@abc.net");
+            string email = @"^(\w)([_\+\-\.]{0,1}[\w])*[@][a-z0-9]{1,} *[.][a-z]{2,}[\.]{0,}[a-z]{0,}$";
+            var regex = new Regex(email);
+            StringAssert.Matches("abc-100@abc.net", regex);
+        }
+
+        [TestMethod]
+        public void TestSampleEmail6()
+        {
+            UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
+
+            objTest.ValidateSampleEmail("abc.100@abc.com.au");
+            string email = @"^(\w)([_\+\-\.]{0,1}[\w])*[@][a-z0-9]{1,} *[.][a-z]{2,}[\.]{0,}[a-z]{0,}$";
+            var regex = new Regex(email);
+            StringAssert.Matches("abc.100@abc.com.au", regex);
+        }
+
+        [TestMethod]
+        public void TestSampleEmail7()
+        {
+            UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
+
+            objTest.ValidateSampleEmail("abc@1.com");
+            string email = @"^(\w)([_\+\-\.]{0,1}[\w])*[@][a-z0-9]{1,} *[.][a-z]{2,}[\.]{0,}[a-z]{0,}$";
+            var regex = new Regex(email);
+            StringAssert.Matches("abc@1.com", regex);
+        }
+
+        [TestMethod]
+        public void TestSampleEmail8()
+        {
+            UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
+
+            objTest.ValidateSampleEmail("abc@gmail.com.com");
+            string email = @"^(\w)([_\+\-\.]{0,1}[\w])*[@][a-z0-9]{1,} *[.][a-z]{2,}[\.]{0,}[a-z]{0,}$";
+            var regex = new Regex(email);
+            StringAssert.Matches("abc@gmail.com.com", regex);
+        }
+
+        [TestMethod]
+        public void TestSampleEmail9()
+        {
+            UserRegistrationTesting.UserRegistrationClass objTest = new UserRegistrationTesting.UserRegistrationClass();
+
+            objTest.ValidateSampleEmail("abc+100@gmail.com");
+            string email = @"^(\w)([_\+\-\.]{0,1}[\w])*[@][a-z0-9]{1,} *[.][a-z]{2,}[\.]{0,}[a-z]{0,}$";
+            var regex = new Regex(email);
+            StringAssert.Matches("abc+100@gmail.com", regex);
+        }
     }
 }

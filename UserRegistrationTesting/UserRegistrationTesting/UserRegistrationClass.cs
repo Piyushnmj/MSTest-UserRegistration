@@ -38,5 +38,11 @@ namespace UserRegistrationTesting
         {
             return Regex.IsMatch(password, passwordPattern);
         }
+
+        public string sampleEmailPattern = @"^([a][b][c])([_\.\+\-])([a-zA-Z0-9]+)\@([b][l])\.([c][o])\.([a-z]{2})*$";
+        public bool ValidateSampleEmail(string sampleEmail)
+        {
+            return Regex.IsMatch(sampleEmail, sampleEmailPattern);
+        }
     }
 }
